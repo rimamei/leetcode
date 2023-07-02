@@ -10,6 +10,8 @@ const roman = {
 
 function romanToInt(s: string): number {
     const arr = s.split('').map(r => roman[r])
+
+    // sum with condition for largest and smallest int
     const result = arr.reduce((acc, x, i) => x < arr[i + 1] ? acc - x : acc + x, 0)
 
     return result
